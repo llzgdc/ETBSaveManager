@@ -6,7 +6,6 @@ import tkinter as tk
 import shutil
 import os
 import re
-#pyinstaller --onefile --windowed --add-data "Resources;Resources" --icon="D:\\Codes\\Codes\\ETB\\ETBSGT\\V2\\2.6.0\\Resources\\Other\\Icons\\ETB.ico" --name="逃离后室存档工具V2.6.0" main.py
 
 VERSION = "V2.6.0"
 
