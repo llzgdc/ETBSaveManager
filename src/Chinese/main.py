@@ -8,7 +8,7 @@ import os
 import re
 
 
-VERSION = "V2.7.1"
+VERSION = "V2.7.2"
 
 Save_Games_dir = os.path.join(os.getenv("LOCALAPPDATA"), "EscapeTheBackrooms", "Saved", "SaveGames")
 
@@ -148,6 +148,8 @@ class Window(tk.Tk):
         treeview.column(column, anchor="center")
 
     def populate_treeview(self):
+        global mode_list, name_list, difficulty_list
+
         mode_list.clear()
         name_list.clear()
         difficulty_list.clear()
@@ -166,11 +168,14 @@ class Window(tk.Tk):
 
         for i, file_name in enumerate(valid_saves, start=1):
             mode, name, difficulty = self.parse_file_name(file_name)
-            if mode == "未知模式" and name == "未知名称" and difficulty == "未知难度":
+            if mode == "未知模式" or name == "未知名称" or difficulty == "未知难度":
                 continue
             if mode and name and difficulty:
                 self.treeview.insert("", "end", text=str(i), values=(mode, name, difficulty))
-
+        mode_list = [mode for mode in mode_list if mode != "未知模式"]
+        name_list = [name for name in name_list if name != "未知名称"]
+        difficulty_list = [difficulty for difficulty in difficulty_list if difficulty != "未知难度"]
+        print(f"\n \n \n \n \n \n \n \n \n {mode_list} \n \n \n \n \n \n \n \n \n \n")
         for col in self.treeview["columns"]:
             self.set_treeview_column_center(self.treeview, col)
     
@@ -190,10 +195,17 @@ class Window(tk.Tk):
                 raise ValueError("The file name format is incorrect")
 
             mode = parts[0]
-            mode_list.append(mode)
             name = parts[1]
-            name_list.append(name)
             difficulty = parts[2].split(".")[0] if len(parts) > 2 else "Normal"
+
+            safe_file_path = os.path.join(Save_Games_dir, os.path.basename(file_name))
+            real_difficulty = self.replace_difficulty(check_real_difficulty(safe_file_path))
+
+            if real_difficulty == "未知":
+                return "未知模式", "未知名称", "未知难度"
+            
+            mode_list.append(mode)
+            name_list.append(name)
             difficulty_list.append(difficulty)
 
             # 安全性检查
@@ -207,13 +219,6 @@ class Window(tk.Tk):
                 difficulty = self.replace_difficulty("Normal")
             else:
                 difficulty = self.replace_difficulty(difficulty)
-
-            # 路径安全检查
-            safe_file_path = os.path.join(Save_Games_dir, os.path.basename(file_name))
-            real_difficulty = self.replace_difficulty(check_real_difficulty(safe_file_path))
-
-            if real_difficulty == "未知":
-                return "未知模式", "未知名称", "未知难度"
 
             if difficulty == real_difficulty:
                 difficulty = f"{difficulty}"
@@ -511,10 +516,12 @@ class Window(tk.Tk):
 
             for selected_item in selected_items:
                 item_index = self.treeview.index(selected_item)
+                print(f"索引:{item_index}")
 
                 name = name_list[item_index]
                 mode = mode_list[item_index]
                 difficulty = difficulty_list[item_index]
+                print(f"名称:{name} 模式:{mode} 难度:{difficulty}")
 
                 save_game_name = f"{mode}_{name}_{difficulty}.sav"
                 delete_items.append(save_game_name)
@@ -723,6 +730,7 @@ class Window(tk.Tk):
         self.hide_btn.place(x=10, y=10, height=44, width=98)
         self.show_back_btn()
         self.detail_btn.place(x=120, y=10, height=44, width=98)
+        self.back_btn.config(command=self.back)
 
     def more(self):
         target_item = "more"
