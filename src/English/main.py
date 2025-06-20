@@ -46,8 +46,8 @@ class Window(tk.Tk):
         screenheight = self.winfo_screenheight()
         logger.debug(f"Screen size obtained: {screenwidth}x{screenheight}")
 
-        self.title(f"Escape The Backrooms Save Manager{VERSION}")
-        self.iconbitmap(get_resource_path("Resources/Other/Icons/ETB.ico"))
+        self.title(f"E.T.B. Save Manager{VERSION}")
+        self.iconbitmap(get_resource_path("Resources/Other/Icons/icon.ico"))
         logger.debug("The title and icon have been set")
 
         # 确保窗口位置为整数

@@ -47,7 +47,7 @@ class Window(tk.Tk):
         logger.debug(f"Screen size obtained: {screenwidth}x{screenheight}")
 
         self.title(f"逃离后室存档工具{VERSION}")
-        self.iconbitmap(get_resource_path("Resources/Other/Icons/ETB.ico"))
+        self.iconbitmap(get_resource_path("Resources/Other/Icons/icon.ico"))
         logger.debug("The title and icon have been set")
 
         # 确保窗口位置为整数

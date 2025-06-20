@@ -1,14 +1,8 @@
 Version 2.6.0 Update Announcement
 
 New Features and Improvements:
-1. Batch Deletion/Hiding of Save Files
-   - Now you can delete or hide multiple saves at once
-
-2. Updated Graphics for Different Levels
-   - Refreshed images across various game levels
-
-3. Bug Fixes
-   - Several stability and performance improvements
+1. Fix the issue of biased recognition in certain cases.
+2. Fix the problem with the [More] interface and [Back button] in some situations.
 
 Difficulty System Changes:
 - If save difficulty matches actual difficulty, only one difficulty will be displayed
