@@ -8,7 +8,7 @@ import os
 import re
 
 
-VERSION = "V2.7.2"
+VERSION = "V2.7.3"
 
 Save_Games_dir = os.path.join(os.getenv("LOCALAPPDATA"), "EscapeTheBackrooms", "Saved", "SaveGames")
 
@@ -440,8 +440,8 @@ class Window(tk.Tk):
             messagebox.showinfo("提示", "存档名称不能为空！")
             return
 
-        if not re.match("^[A-Za-z0-9]+$", new_name):
-            messagebox.showerror("错误", "仅限英文字母及数字")
+        if re.search(r"_", new_name):
+            messagebox.showerror("错误", "禁止包含下划线！")
             return
         
         mode = self.mode_box.get()
@@ -578,7 +578,7 @@ class Window(tk.Tk):
             opened.append(target_item)
 
     def create_edit_widgets(self):
-        self.edit_name_label = tk.Label(text="请输入新的存档名称\n仅限英文字母及数字\n改不了代表名称重复", font=("SimHei", 12))
+        self.edit_name_label = tk.Label(text="请输入新的存档名称\n禁止包含下划线\n改不了代表名称重复", font=("SimHei", 12))
         self.edit_name_label.place(x=200, y=130, width=200, height=70)
 
         self.edit_mode_label = tk.Label(text="请选择新的模式", font=("SimHei", 12))
@@ -635,8 +635,8 @@ class Window(tk.Tk):
                 messagebox.showinfo("提示", "存档名称不能为空！")
                 return
 
-            if not re.match("^[A-Za-z0-9]+$", new_name):
-                messagebox.showerror("错误", "仅限英文字母及数字")
+            if re.search(r"_", new_name):
+                messagebox.showerror("错误", "禁止包含下划线！")
                 return
             
             if mode == "SINGLEPLAYER":

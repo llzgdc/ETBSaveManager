@@ -8,7 +8,7 @@ import os
 import re
 
 
-VERSION = "V2.7.2"
+VERSION = "V2.7.3"
 
 Save_Games_dir = os.path.join(os.getenv("LOCALAPPDATA"), "EscapeTheBackrooms", "Saved", "SaveGames")
 
@@ -434,8 +434,8 @@ class Window(tk.Tk):
             messagebox.showinfo("Tip", "Save name cannot be empty!")
             return
 
-        if not re.match("^[A-Za-z0-9]+$", new_name):
-            messagebox.showerror("Error", "Only English letters and numbers are allowed!")
+        if re.search(r"_", new_name):
+            messagebox.showerror("Error", "Underlines are prohibited!")
             return
         
         mode = self.mode_box.get()
@@ -627,8 +627,8 @@ class Window(tk.Tk):
                 messagebox.showinfo("Tip", "Save name cannot be empty!")
                 return
 
-            if not re.match("^[A-Za-z0-9]+$", new_name):
-                messagebox.showerror("Error", "English letters and numbers only")
+            if re.search(r"_", new_name):
+                messagebox.showerror("Error", "Underlines are prohibited!")
                 return
             
             if mode == "SINGLEPLAYER":

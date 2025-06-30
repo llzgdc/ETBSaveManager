@@ -1,8 +1,7 @@
-Version 2.6.0 Update Announcement
+Version 2.7.3 Update Announcement
 
 New Features and Improvements:
-1. Fix the issue of biased recognition in certain cases.
-2. Fix the problem with the [More] interface and [Back button] in some situations.
+1. The restrictions on save file names are relaxed; they only need to not contain underlines.
 
 Difficulty System Changes:
 - If save difficulty matches actual difficulty, only one difficulty will be displayed
