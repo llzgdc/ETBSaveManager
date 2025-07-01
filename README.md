@@ -8,7 +8,7 @@
 
 # Update History
 
-## Version 2.0.0 ~ 2.7.3 (2024-07-23 ~ 2025-06-30)
+## Version 2.0.0 ~ 2.8.0(development) (2024-07-23 ~ NOW)
 
 - Complete Interface Redesign
 - Fixed Legacy Bugs
@@ -20,23 +20,45 @@
 - Implemented Save List Display
 - Developed Save Identification, Creation, Deletion, and Editing Functions
 
-# Installation
+# Installation(v2.7.3)
 
 ### Windows
 
 1. Download Installation Package:
 
 - [Link-Github](https://github.com/llzgdc/EscapeTheBackroomsSaveGamesTools/releases/tag/v2.3.0)
-- [Link-Gitee](https://gitee.com/llzgd/EscapeTheBackroomsSaveGamesTools/releases/tag/v2.6.0)
-- [Link-蓝奏云](https://llzgd.lanzouu.com/b009h9fqxg) Password:`aq4u`
-
 
 2. For `exe` file, double-click to use directly
 
 3. For `zip` file, extract and double-click `ETBSaveManager-EN v2.7.3.exe`
 
+# Development (v2.8.0)
 
-## Feature Introduction
+## Development Environment
+
+You need to install the Rust environment first.
+
+1. Install Rust: [https://www.rust-lang.org/](https://www.rust-lang.org/)
+
+Then install the PyO3 environment.
+
+1. Install PyO3: [https://pyo3.rs/](https://pyo3.rs/)
+
+### Steps
+
+1. Clone the project code: `git clone https://github.com/llzgdc/ETBSaveManager.git`
+2. Enter the project directory: `cd ETBSaveManager`
+3. Create a virtual environment: `python -m venv venv`
+4. Activate the virtual environment: `source venv/bin/activate`
+5. Run in terminal: `maturin new ETBSM_V2_Function_Rust`
+6. Enter the project directory: `cd ETBSM_V2_Function_Rust`
+7. Copy files from the `src-rust` folder into the `ETBSM_V2_Function_Rust` folder
+8. Run `maturin develop` and wait for compilation
+9. Now you can modify `lib.rs`, `main.py`, or other files
+
+**Tips:** After each modification to `lib.rs`, you need to run `maturin develop` again to recompile.
+
+# Feature Introduction
 
 ### Create Function  
 Creation interface includes: Save Name, Route/Plot, Level, Difficulty, and Mode. You can freely fill or select. Right side shows a simple level preview image for quick level selection.
@@ -56,5 +78,5 @@ Click the button to reload save list.
 ### Show Folder Function
 Click the button to open save folder.
 
-### Bilibili Video Introduction
+# Bilibili Video Introduction
 **Link：[https://www.bilibili.com/video/BV194421Z7sj](https://www.bilibili.com/video/BV194421Z7sj)**  

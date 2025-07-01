@@ -8,7 +8,7 @@
 
 # 更新历史
 
-## 版本 2.0.0 ~ 2.7.3 (2024-07-23 ~ 2025-06-30)
+## 版本 2.0.0 ~ 2.8.0(development) (2024-07-23 ~ 现在)
 
 - 界面大换新
 - 修复了遗留的 bug
@@ -20,7 +20,7 @@
 - 实现了存档列表的展示
 - 实现了存档识别、新建、删除、编辑功能
 
-# 安装
+# 安装（v2.7.3）
 
 ### Windows
 
@@ -33,8 +33,30 @@
 2. 若下载`exe`文件，直接双击即可使用
 3. 若下载`zip`文件，解压后双击`逃离后室存档工具V2.7.3.exe`即可使用
 
+# 开发（v2.8.0）
 
-## 功能介绍
+## 开发环境
+你需要先安装rust环境
+1. 安装rust环境：[https://www.rust-lang.org/zh-CN/](https://www.rust-lang.org/zh-CN/)
+
+再安装PyO3环境
+1. 安装PyO3环境：[https://pyo3.rs/](https://pyo3.rs/)
+
+### 步骤
+1. 克隆项目代码`git clone https://github.com/llzgdc/ETBSaveManager.git`
+2. 进入项目目录`cd ETBSaveManager`
+3. 安装虚拟环境`python -m venv venv`
+4. 激活虚拟环境`source venv/bin/activate`
+5. 终端中运行`maturin new ETBSM_V2_Function_Rust`
+6. 进入项目目录`cd ETBSM_V2_Function_Rust`
+7. 将`src-rust`文件夹中的文件复制到`ETBSM_V2_Function_Rust`文件夹中
+8. 运行`maturin develop`并等待编译
+9. 现在可以修改`lib.rs`或`main.py`及其他文件
+
+**tips:** 每次修改完`lib.rs`后，需要运行`maturin develop`重新编译
+
+
+# 功能介绍
 
 ### 新建功能  
 新建界面中包含：存档名称、线路剧情、层级、难度与模式。  
@@ -61,5 +83,5 @@
 ### 显示文件夹功能
 点击按钮后可以打开存档文件夹  
 
-### Bilibili视频介绍
+# Bilibili视频介绍
 **链接：[https://www.bilibili.com/video/BV194421Z7sj](https://www.bilibili.com/video/BV194421Z7sj)**  
