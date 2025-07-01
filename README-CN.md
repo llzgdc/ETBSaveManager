@@ -1,65 +1,44 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+# 逃离后室存档工具 (V2.7.3) 🎮
 
-<div style="text-align: center;"><img src="https://github.com/llzgdc/ETBSaveManager/blob/development/src-tauri/icons/128x128.png" alt="icon" width="128" height="128"></div>
-
-<div style="text-align: center;"><h1>逃离后室存档工具</h1></div>
+[中文](#) | [English](./README.md)
 
 ---
 
-# 更新历史
+这是一个用于管理《Escape The Backrooms》游戏存档的工具。它允许用户查看、创建、编辑、删除以及隐藏他们的游戏存档。
 
-## 版本 2.0.0 ~ 2.7.3 (2024-07-23 ~ 2025-06-30)
+### 功能介绍 🌟
 
-- 界面大换新
-- 修复了遗留的 bug
-- 添加了更多功能
+- **存档列表显示**：实现了对存档列表的展示。
+- **存档识别，创建，删除及编辑功能**：支持对存档的基本操作。
+  - 创建新存档时，可以选择或填写存档名称、路线/剧情、关卡、难度和模式等信息，并提供简单的关卡预览图帮助快速选择关卡。
+  - 编辑现有存档时，支持修改存档名称、难度和模式。
+  - 删除存档时，支持批量删除。
+  - 隐藏存档后，可在存档文件夹中的`HiddenFiles`文件夹内找到隐藏的存档文件。
+- **界面大换新**：修复了遗留的bug并增加了更多功能，提升了用户体验。
+- **刷新功能**：点击按钮即可重新获取最新的存档列表。
+- **显示文件夹功能**：点击按钮可直接打开存档文件夹。
 
-## 版本 1.0.0 ~ 1.2.0 (2024-02-15 ~ 2024-02-16)
+### 下载与安装 📥
 
-- 初始版本发布
-- 实现了存档列表的展示
-- 实现了存档识别、新建、删除、编辑功能
+请访问我们的 [Gitee页面](https://gitee.com/llzgd/ETBSaveManager/releases/latest) 或者 [GitHub页面](https://github.com/llzgdc/ETBSaveManager/releases/latest) 获取最新版本的安装包。
+这里还提供 [蓝奏云链接](https://llzgd.lanzouu.com/b009h9fqxg) 密码是`aq4u`。
 
-# 安装
+#### 如何使用 🛠️
 
-### Windows
+- 如果下载的是exe文件，直接双击即可使用。
+- 如果下载的是zip文件，请先解压缩，然后双击运行`逃离后室存档工具.exe`。
 
-1. 下载安装包：
+### 开源许可 📄
 
-- [下载链接-Github](https://github.com/llzgdc/EscapeTheBackroomsSaveGamesTools/releases/tag/v2.7.3)
-- [下载链接-Gitee](https://gitee.com/llzgd/EscapeTheBackroomsSaveGamesTools/releases/tag/v2.7.3)
-- [下载链接-蓝奏云](https://llzgd.lanzouu.com/b009h9fqxg) 密码:`aq4u`
+本项目遵循 [MIT 许可证](https://opensource.org/licenses/MIT)。
 
-2. 若下载`exe`文件，直接双击即可使用
-3. 若下载`zip`文件，解压后双击`逃离后室存档工具V2.7.3.exe`即可使用
+### 更新历史 🕰️
 
+- **V2.0.0 ~ V2.7.3 (2024-07-23 ~ 2025-06-30)**: 完整界面重设计，修复了遗留的bug，增加了更多功能。
+- **V1.0.0 ~ V1.2.0 (2024-02-15 ~ 2024-02-16)**: 初始版本发布，实现了基本的存档管理功能。
 
-## 功能介绍
+### 视频介绍 🎥
 
-### 新建功能  
-新建界面中包含：存档名称、线路剧情、层级、难度与模式。  
-可以自由填写或选择。  
-右边有简易的层级图片预览，快速找到想要的层级。
+观看 [Bilibili视频介绍](https://www.bilibili.com/video/BV194421Z7sj) 了解如何使用此工具。
 
-### 删除功能
-你需要先在Treeview中选择一个存档，再点击删除。   
-目前只能一个一个的删除，未来会加入多选删除。  
-
-### 编辑功能
-同样，你需要先在Treeview中选择一个存档，再点击编辑。  
-在编辑界面中，你可以输入存档名称。  
-如果你发现改不了名的时候，就代表名称重复了。
-
-### 隐藏功能
-同样，你需要先在Treeview中选择一个存档，再点击隐藏。  
-隐藏的存档文件你可以在存档文件夹下的HiddenFiles文件夹中查看。  
-未来会加入“显示”功能
-
-### 刷新功能
-点击按钮后可以重新获取存档
-
-### 显示文件夹功能
-点击按钮后可以打开存档文件夹  
-
-### Bilibili视频介绍
-**链接：[https://www.bilibili.com/video/BV194421Z7sj](https://www.bilibili.com/video/BV194421Z7sj)**  
+---

@@ -1,60 +1,41 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+# ETB Save Manager (V2.7.3) 🎮
 
-<div style="text-align: center;"><img src="https://github.com/llzgdc/ETBSaveManager/blob/development/src-tauri/icons/128x128.png" alt="icon" width="128" height="128"></div>
-
-<div style="text-align: center;"><h1>ETB Save Manager</h1></div>
+[中文](./README-CN.md) | [English](#)
 
 ---
 
-# Update History
+This is a tool for managing save games in the game "Escape The Backrooms". It allows users to view, create, edit, delete, and hide their game saves.
 
-## Version 2.0.0 ~ 2.7.3 (2024-07-23 ~ 2025-06-30)
+### Feature Introduction 🌟
 
-- Complete Interface Redesign
-- Fixed Legacy Bugs
-- Added More Features
+- **Save List Display**: Implemented display of save lists.
+- **Save Identification, Creation, Deletion, and Editing Functions**: Supports basic operations on saves.
+  - When creating new saves, you can select or enter details such as save name, route/plot, level, difficulty, and mode, with simple level preview images to help quickly choose levels.
+  - When editing existing saves, the user can modify the save name, difficulty and mode.
+  - For deleting saves, currently only single deletion is supported; multi-select deletion will be added in future updates.
+  - Hidden saves can be found in the `HiddenFiles` folder within the save directory.
+- **Complete Interface Redesign**: Fixed legacy bugs and added more features, enhancing user experience.
+- **Refresh Function**: Click the button to reload the latest save list.
+- **Show Folder Function**: Click the button to directly open the save folder.
 
+### Download & Installation 📥
 
-## Version 1.0.0 ~ 1.2.0 (2024-02-15 ~ 2024-02-16)
-- Initial Version Release
-- Implemented Save List Display
-- Developed Save Identification, Creation, Deletion, and Editing Functions
+Please visit our [Gitee page](https://gitee.com/llzgd/ETBSaveManager/releases/latest) or [GitHub page](https://github.com/llzgdc/ETBSaveManager/releases/latest) to download the latest version of the installation package.
 
-# Installation
+#### How to Use 🛠️
 
-### Windows
+- For exe files, simply double-click to use.
+- For zip files, extract first, then double-click `ETBSaveManager V2.7.3.exe` to run.
 
-1. Download Installation Package:
+### License 📄
 
-- [Link-Github](https://github.com/llzgdc/EscapeTheBackroomsSaveGamesTools/releases/tag/v2.3.0)
-- [Link-Gitee](https://gitee.com/llzgd/EscapeTheBackroomsSaveGamesTools/releases/tag/v2.6.0)
-- [Link-蓝奏云](https://llzgd.lanzouu.com/b009h9fqxg) Password:`aq4u`
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
+### Update History 🕰️
 
-2. For `exe` file, double-click to use directly
+- **V2.0.0 ~ V2.7.3 (2024-07-23 ~ 2025-06-30)**: Complete interface redesign, fixed legacy bugs, and added more features.
+- **V1.0.0 ~ V1.2.0 (2024-02-15 ~ 2024-02-16)**: Initial version release, implemented basic save management functions.
 
-3. For `zip` file, extract and double-click `ETBSaveManager-EN v2.7.3.exe`
+### Video Introduction 🎥
 
-
-## Feature Introduction
-
-### Create Function  
-Creation interface includes: Save Name, Route/Plot, Level, Difficulty, and Mode. You can freely fill or select. Right side shows a simple level preview image for quick level selection.
-
-### Delete Function
-First select a save in the Treeview, then click delete. Currently supports single deletion, multi-select deletion coming in future updates.
-
-### Edit Function
-Select a save in the Treeview, then click edit. In the edit interface, you can input save names. If you can't change the name, it means the name is already in use.
-
-### Hide Function
-Select a save in the Treeview, then click hide. Hidden save files can be found in the HiddenFiles folder within the save directory. "Show" function will be added in future updates.
-
-### Refresh Function
-Click the button to reload save list.
-
-### Show Folder Function
-Click the button to open save folder.
-
-### Bilibili Video Introduction
-**Link：[https://www.bilibili.com/video/BV194421Z7sj](https://www.bilibili.com/video/BV194421Z7sj)**  
+Watch the [Bilibili video introduction](https://www.bilibili.com/video/BV194421Z7sj) to learn how to use this tool.
